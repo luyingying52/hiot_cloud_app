@@ -8,8 +8,6 @@ import android.widget.Toast;
 
 import com.huatec.hiot_cloud.R;
 import com.huatec.hiot_cloud.base.BaseActivity;
-import com.huatec.hiot_cloud.test.mvptest.dagger2test.DaggerPresenterComponent;
-import com.huatec.hiot_cloud.test.mvptest.dagger2test.PresenterComponent;
 import com.huatec.hiot_cloud.test.mvptest.model.User;
 
 import javax.inject.Inject;
@@ -22,7 +20,7 @@ public class TestMVPActivity extends  BaseActivity<TestView, TestPresenter> impl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        getComponent().inject(this);
+        getActivityComponent().inject(this);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_m_v_p);
@@ -62,11 +60,6 @@ public class TestMVPActivity extends  BaseActivity<TestView, TestPresenter> impl
 
     }
 
-    /*
-    创建注入器
-     */
-    public PresenterComponent getComponent() {
-        return DaggerPresenterComponent.builder().build();
-    }
+
 }
 
