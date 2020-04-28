@@ -11,17 +11,18 @@ public class TestPresenter extends BasePresenter<TestView> {
     @Inject
     ThirdObj thirdObj;
 
-@Inject
-public  TestPresenter(){
+    @Inject
+    public TestPresenter() {
 
-}
+    }
 
 
-     public void login(User user) {
-    thirdObj.thirdAction();
-        if("lisi".equals(user.getUserName())&&"123".equals(user.getPassword())){
+    public void login(User user) {
+        thirdObj.thirdAction();
+        if ("lisi".equals(user.getUserName()) && "123".equals(user.getPassword())) {
             getView().showMessage("登陆成功");
-        }else{
+        } else {
             getView().showMessage("登陆失败");
         }
-    }}
+    }
+}

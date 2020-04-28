@@ -2,7 +2,6 @@ package com.huatec.hiot_cloud.base;
 
 import android.app.Application;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +15,7 @@ import com.huatec.hiot_cloud.injection.module.ActivityModule;
 /*
 MVP架构Activity层基类
  */
+
 public abstract class BaseActivity<V extends BaseView,P extends BasePresenter>  extends AppCompatActivity implements BaseView {
 
 
@@ -26,8 +26,8 @@ public abstract class BaseActivity<V extends BaseView,P extends BasePresenter>  
     private ActivityComponent mActivityComponent;
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
        presenter = createPresenter();
       presenter.setView(this);
 
