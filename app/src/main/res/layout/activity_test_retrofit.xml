@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".test.networktest.TestRetrofitActivity">
+
+    <!--
+      ctrl+R可以批量替换
+      -->
+    <Button
+        android:text="execute"
+        android:id="@+id/btn_retrofit_execute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <Button
+        android:text="enqueue"
+        android:id="@+id/btn_retrofit_enqueue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <Button
+        android:text="用户信息"
+        android:id="@+id/btn_retrofit_userinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <Button
+        android:text="登录"
+        android:id="@+id/btn_retrofit_Login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <Button
+        android:text="修改邮箱"
+        android:id="@+id/btn_retrofit_update_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <Button
+        android:text="注册"
+        android:id="@+id/btn_retrofit_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>
